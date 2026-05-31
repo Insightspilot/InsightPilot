@@ -1,0 +1,8 @@
+* Heavy data processing
+* Adding more visulization options
+* Adding Joins
+* Making Dashboards looks better
+* Adding AI Insights
+* Email notfication
+* Email Auth/opt
+* Notfications for Users

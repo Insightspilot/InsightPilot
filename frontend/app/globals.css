@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f1f5f9;
+  --foreground: #1e293b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Ant Design overrides for clean look */
+.ant-btn-primary {
+  box-shadow: none !important;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Card shadow styling */
+.ant-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+  border-color: #e2e8f0 !important;
+}
+
+.ant-card:hover {
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Queries table – selected row highlight */
+.queries-table-row-selected > td {
+  background-color: #eff6ff !important;
+}
+.queries-table-row-selected:hover > td {
+  background-color: #dbeafe !important;
+}
+
+/* AG Grid custom styling */
+.chart-renderer-grid .ag-header {
+  background: #eff6ff;
+  border-bottom: 1px solid #bfdbfe;
+}
+.chart-renderer-grid .ag-header-cell {
+  font-weight: 600;
+  font-size: 12px;
+  color: #1e40af;
+}
+.chart-renderer-grid .ag-paging-panel {
+  font-size: 12px;
+  min-height: 32px;
+}
+.chart-renderer-grid .ag-row-even {
+  background: #f8fafc;
+}
+.chart-renderer-grid .ag-row:hover {
+  background: #eff6ff !important;
+}
+
+/* Column visibility dropdown – compact height */
+.ant-dropdown .ant-dropdown-menu {
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+/* Sidebar dark theme overrides */
+.sidebar-dark-search .ant-input {
+  background: transparent !important;
+  color: #e2e8f0 !important;
+}
+
+.sidebar-dark-search .ant-input::placeholder {
+  color: #94a3b8 !important;
+}
+
+.sidebar-dark-search .ant-input-clear-icon {
+  color: #94a3b8 !important;
+}
+
+/* Sidebar dark theme menu overrides */
+.sidebar-dark-menu .ant-menu-item-group-title {
+  color: rgba(148, 163, 184, 0.7) !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.sidebar-dark-menu .ant-menu-item {
+  color: #e2e8f0 !important;
+  border-radius: 8px !important;
+  margin: 2px 8px !important;
+}
+
+.sidebar-dark-menu .ant-menu-item .anticon {
+  color: #94a3b8 !important;
+}
+
+.sidebar-dark-menu .ant-menu-item:hover {
+  color: #ffffff !important;
+  background: rgba(59, 130, 246, 0.15) !important;
+}
+
+.sidebar-dark-menu .ant-menu-item:hover .anticon {
+  color: #ffffff !important;
+}
+
+.sidebar-dark-menu .ant-menu-item-selected {
+  background: linear-gradient(135deg, #2563EB 0%, #3b82f6 100%) !important;
+  color: #ffffff !important;
+}
+
+.sidebar-dark-menu .ant-menu-item-selected .anticon {
+  color: #ffffff !important;
+}
