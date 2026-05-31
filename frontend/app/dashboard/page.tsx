@@ -1,5 +1,3 @@
-"use client"
-
 import { redirect } from "next/navigation";
 import { getProfileAction } from "@/lib/actions";
 import { UserProfile } from "@/lib/auth";
