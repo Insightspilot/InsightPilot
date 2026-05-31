@@ -141,13 +141,13 @@ export default function VisualizationViewer({
       </Card>
 
       {/* AI Insights */}
-      {!loading && !error && rows.length > 0 && (
+      {/* {!loading && !error && rows.length > 0 && (
         <AIInsightsPanel
           vizId={viz.id}
           columns={columns}
           rows={rows}
         />
-      )}
+      )} */}
 
       {/* SQL Query used */}
       <Card

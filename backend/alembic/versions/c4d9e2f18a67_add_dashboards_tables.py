@@ -27,7 +27,12 @@ def upgrade() -> None:
         sa.Column("title", sa.String(255), nullable=False),
         sa.Column("description", sa.Text, nullable=True),
         sa.Column("layout", postgresql.JSON, nullable=False, server_default="{}"),
-        sa.Column("visibility", sa.Enum("private", "public", name="visibility_type", schema="insightpilot", create_type=False), nullable=False, server_default="private"),
+        sa.Column(
+            "visibility",
+            sa.String(20),
+            nullable=False,
+            server_default="private"
+        ),
         sa.Column("is_active", sa.Boolean, nullable=False, server_default="true"),
         sa.Column("created_at", sa.DateTime(timezone=True), nullable=False, server_default=sa.func.now()),
         sa.Column("updated_at", sa.DateTime(timezone=True), nullable=False, server_default=sa.func.now()),
