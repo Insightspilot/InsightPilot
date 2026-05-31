@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
 
     # AI / Gemini (optional — leave empty to use templated insights)
-    GEMINI_API_KEY: str = "AIzaSyChfPKMgT8yumEhNNjKcE3Hg5fm1cGrHDM"
+    GEMINI_API_KEY: str = ""
     GEMINI_MODEL: str = "gemini-2.0-flash-lite"
 
     model_config = {
